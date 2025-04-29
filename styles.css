@@ -204,6 +204,12 @@ section {
     font-size: 1.5rem; /* make the icons bigger */
 }
 
+.linkContainer div {
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+}
+
 .linkItem:hover i {
     transform: scale(1.2);
     transition: transform 0.3s ease;
