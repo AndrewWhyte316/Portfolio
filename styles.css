@@ -4,6 +4,10 @@
     --bg-color: #0d1512;
 }
 
+html {
+    font-size: 16px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,8 +22,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 72px;
-    padding: 14px;
+    gap: 4.5rem;
+    padding: 0.875rem;
 }
 
 .darkerText {
@@ -33,21 +37,21 @@ header, main, footer {
 }
 
 p {
-    font-size: 1.05em;
+    font-size: 1.05rem;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
+    gap: 0.875rem;
 }
 
 nav {
     color: var(--secondary-color);
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
 }
 
 nav a {
@@ -69,18 +73,18 @@ main {
 }
 
 section {
-    gap: 30px;
+    gap: 2rem;
 }
 
 .nameContainer {
-    gap: 12px;
+    gap: 0.875rem;
 }
 
 .statsContainer {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 30px;
+    gap: 2rem;
 }
 
 .imgContainer {
@@ -98,14 +102,14 @@ section {
 .stats {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0.875rem;
 }
 
-.stats>div {
+.stats > div {
     flex: 1;
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 2rem;
 }
 
 .stats div i {
@@ -125,10 +129,12 @@ section {
 .contact {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 0.875rem;
     cursor: pointer;
     width: fit-content;
     margin-right: auto;
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 .contact:hover {
@@ -138,23 +144,23 @@ section {
 .projectContainer {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 2rem;
 }
 
 .headerText {
-    margin-bottom: 24px;
+    margin-bottom: 2rem;
 }
 
 .projectItem {
     display: flex;
     align-items: stretch;
-    gap: 24px;
+    gap: 2rem;
 }
 
 .projectItem div:first-child {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0.875rem;
 }
 
 .projectItem div:last-child {
@@ -173,14 +179,14 @@ section {
 .linkContainer {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 2rem;
 }
 
 .linkItem {
     display: flex;
     flex-direction: row !important;
     align-items: center;
-    gap: 14px !important;
+    gap: 0.875rem !important;
     color: var(--primary-color);
     text-decoration: none;
     cursor: pointer;
@@ -194,17 +200,38 @@ section {
     font-size: 0.9em;
 }
 
+.linkItem i {
+    font-size: 1.5rem; /* make the icons bigger */
+}
+
+.linkItem:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
 @media (min-width: 640px) {
     .statsContainer {
         flex-direction: row;
     }
 
     .stats {
-        gap: 0px;
+        gap: 0.875rem;
     }
 
     .aboutMe {
         width: 80%;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
     }
 }
