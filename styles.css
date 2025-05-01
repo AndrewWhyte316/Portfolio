@@ -182,6 +182,12 @@ section {
     gap: 2rem;
 }
 
+.linkContainer div {
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+}
+
 .linkItem {
     display: flex;
     flex-direction: row !important;
@@ -197,17 +203,12 @@ section {
 }
 
 .linkItem p {
-    font-size: 0.9em;
+    font-size: 1rem;
+    color: var(--secondary-color);
 }
 
 .linkItem i {
-    font-size: 1.5rem; /* make the icons bigger */
-}
-
-.linkContainer div {
-    display: grid;
-    place-items: center;
-    min-width: 40px;
+    font-size: 1.5rem;
 }
 
 .linkItem:hover i {
