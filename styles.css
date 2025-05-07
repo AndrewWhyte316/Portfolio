@@ -188,6 +188,13 @@ section {
     min-width: 40px;
 }
 
+.linkContainer > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 .linkItem {
     display: flex;
     flex-direction: row !important;
