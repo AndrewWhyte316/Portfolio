@@ -4,15 +4,11 @@
     --bg-color: #0d1512;
 }
 
-html {
-    font-size: 16px;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Inter', sans-serif;
     transition-duration: 200ms;
 }
 
@@ -22,74 +18,79 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 4.5rem;
-    padding: 0.875rem;
+    gap: 72px;
+    padding: 14px;
 }
 
 .darkerText {
     color: var(--secondary-color);
 }
 
-header, main, footer {
-    max-width: 700;
+header,
+main,
+footer {
+    max-width: 700px;
     margin: 0 auto;
     width: 100%;
 }
 
 p {
-    font-size: 1.05rem;
+    font-size: 1.05em;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.875rem;
+    gap: 14px;
 }
 
 nav {
     color: var(--secondary-color);
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
 }
 
 nav a {
-    color: var(--secondary-color);
     cursor: pointer;
+    text-decoration: none;
 }
 
 nav a:hover {
     opacity: 0.7;
 }
 
-main, section, .mainContainer {
+main,
+section,
+.nameContainer {
     display: flex;
     flex-direction: column;
 }
 
 main {
-    gap: 60px;
+    gap: 64px;
+    padding-bottom: 64px;
 }
 
 section {
-    gap: 2rem;
+    gap: 48px;
 }
 
 .nameContainer {
-    gap: 0.875rem;
+    gap: 8px;
 }
 
 .statsContainer {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 2rem;
+    gap: 24px;
 }
 
 .imgContainer {
     border-radius: 100%;
-    max-width: 130px;
+    max-width: 114px;
     overflow: hidden;
 }
 
@@ -102,14 +103,14 @@ section {
 .stats {
     display: flex;
     flex-direction: column;
-    gap: 0.875rem;
+    gap: 14px;
 }
 
-.stats > div {
+.stats>div {
     flex: 1;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 8px;
 }
 
 .stats div i {
@@ -124,53 +125,60 @@ section {
 
 .aboutMe {
     line-height: 1.5em;
+
 }
 
-.contact {
+.outreach {
     display: flex;
     align-items: center;
-    gap: 0.875rem;
+    gap: 14px;
     cursor: pointer;
     width: fit-content;
     margin-right: auto;
-    text-decoration: none;
-    color: var(--primary-color);
+    text-decoration: none; /* 👈 Add this */
+    color: var(--primary-color); /* Just in case */
 }
 
-.contact:hover {
+.outreach:hover {
     opacity: 0.7;
+}
+
+.outreach i {
+    transform: rotate(-45deg);
+    color: var(--secondary-color); /* 👈 Set icon color */
 }
 
 .projectContainer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 48px;
 }
 
 .headerText {
-    margin-bottom: 2rem;
+    margin-bottom: 24px;
 }
 
 .projectItem {
     display: flex;
     align-items: stretch;
-    gap: 2rem;
+    gap: 24px;
 }
 
 .projectItem div:first-child {
     display: flex;
     flex-direction: column;
-    gap: 0.875rem;
+    gap: 14px;
+    flex: 1;
 }
 
-.projectItem div:last-child {
+.projectItem>div:last-child {
     aspect-ratio: 16/9;
     max-width: 30%;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
-.projectItem div:last-child img {
+.projectItem>div:last-child img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -179,48 +187,25 @@ section {
 .linkContainer {
     display: flex;
     align-items: center;
-    gap: 2rem;
-}
-
-.linkContainer div {
-    display: grid;
-    place-items: center;
-    min-width: 40px;
-}
-
-.linkContainer > div {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    gap: 24px;
 }
 
 .linkItem {
     display: flex;
     flex-direction: row !important;
     align-items: center;
-    gap: 0.875rem !important;
+    gap: 14px !important;
     color: var(--primary-color);
     text-decoration: none;
     cursor: pointer;
 }
 
-.linkItem:hover  {
+.linkItem:hover {
     opacity: 0.7;
 }
 
 .linkItem p {
-    font-size: 1rem;
-    color: var(--secondary-color);
-}
-
-.linkItem i {
-    font-size: 1.5rem;
-}
-
-.linkItem:hover i {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
+    font-size: 0.9em;
 }
 
 @media (min-width: 640px) {
@@ -229,23 +214,11 @@ section {
     }
 
     .stats {
-        gap: 0.875rem;
+        gap: 0px;
     }
 
     .aboutMe {
         width: 80%;
         margin-right: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 14px;
     }
 }
