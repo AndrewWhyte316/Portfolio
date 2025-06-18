@@ -1,7 +1,9 @@
 :root {
     --primary-color: #adf0d4;
     --secondary-color: #1fd8a4;
-    --bg-color: #0d1512;
+    --gradient-start: #192f2b;
+    --gradient-mid: #143f3b;
+    --gradient-end: #0f1c19;
 }
 
 * {
@@ -13,7 +15,9 @@
 }
 
 body {
-    background: var(--bg-color);
+    background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--primary-color);
     min-height: 100vh;
     display: flex;
@@ -53,6 +57,7 @@ nav {
 }
 
 nav a {
+    color: var(--secondary-color);
     cursor: pointer;
     text-decoration: none;
 }
@@ -220,5 +225,17 @@ section {
     .aboutMe {
         width: 80%;
         margin-right: auto;
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
